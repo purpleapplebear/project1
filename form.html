@@ -1,0 +1,70 @@
+<html>
+    <head>
+        <title>Test form</title>
+    </head>
+    <body>
+        <header style="background-color: rgb(146, 194, 166); padding:10px 0px 10px 50px;">
+            <h1 style="font: 40pt Courier New">My Form</h1>
+        </header>
+        <br />
+        <h2>Page heading here</h2>
+        <form>
+            <fieldset style="width:40%;">
+                <legend>Form name</legend>
+                <label>
+                    Example range: <br />
+                    <input type="range" max="100" min="10" step="5" value="15" />
+                </label>
+                <br /><br />
+                <label>
+                    Example text box: <br />
+                    <input value="Read Only" readonly />
+                </label>
+                <br /><br />
+                <label>
+                    Example checkbox: <br />
+                    <input type="checkbox" checked="yes" /> Lemons<br />
+                    <input type="checkbox" /> Peaches<br />
+                    <input type="checkbox" /> Grapes
+                </label>
+                <br /><br />
+                <label>
+                    Example radio button:<br />
+                    <input type ="radio" name="radio" value="Lemons" /> Lemons <br />
+                    <input type ="radio" name="radio" /> Peaches <br />
+                    <input type ="radio" name="radio" /> Grapes 
+                </label>
+                <br /><br />
+                <label>
+                    Example date picker:<br />
+                    <input type="date" />
+                </label>
+                <br /><br />
+                <label>
+                    Example colour picker:<br />
+                    <input type="color" value="#92C2A6" />
+                </label>
+                <br /><br />
+                <label>
+                    Example dropdown:<br />
+                    <select>
+                        <option> </option>
+                        <option>Lemons</option>
+                        <option>Peaches</option>
+                        <option>Grapes</option>
+                    </select>
+                </label>
+                <br /><br />
+                <label>
+                    Example text area:<br />
+                    <textarea style="resize: none;" rows="5" cols="50">Write here</textarea>
+                </label>
+                <br /><br />
+                Buttons:<br />
+                <input type="reset" value="Clear form">
+                <button>Button</button>
+        </fieldset>
+        </form>
+
+    </body>
+</html>
