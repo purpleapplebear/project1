@@ -7,13 +7,12 @@
             <h1 style="font: 40pt Courier New">My Form</h1>
         </header>
         <br />
-        <h2>Page heading here</h2>
-        <form>
-            <fieldset style="width:40%;">
-                <legend>Form name</legend>
+        <form action="http://www.nextpoint.co.uk/test.php" method="post">
+            <fieldset style="width:40%; border:5px groove; padding:10px;">
+                <legend style="font: 30px Courier New;">Form name</legend>
                 <label>
                     Example range: <br />
-                    <input type="range" max="100" min="10" step="5" value="15" />
+                    <input name="range" type="range" max="100" min="10" step="5" value="15" />
                 </label>
                 <br /><br />
                 <label>
@@ -21,33 +20,30 @@
                     <input value="Read Only" readonly />
                 </label>
                 <br /><br />
-                <label>
-                    Example checkbox: <br />
-                    <input type="checkbox" checked="yes" /> Lemons<br />
-                    <input type="checkbox" /> Peaches<br />
-                    <input type="checkbox" /> Grapes
-                </label>
+                
+                Example checkbox: <br />
+                <label><input name="lemons" type="checkbox" /> Lemons </label><br />
+                <label><input name="peaches" type="checkbox" /> Peaches </label><br />
+                <label><input name="grapes" type="checkbox" /> Grapes </label>
                 <br /><br />
-                <label>
-                    Example radio button:<br />
-                    <input type ="radio" name="radio" value="Lemons" /> Lemons <br />
-                    <input type ="radio" name="radio" /> Peaches <br />
-                    <input type ="radio" name="radio" /> Grapes 
-                </label>
+                Example radio button:<br />
+                <label><input type ="radio" name="radio" value="lemons" /> Lemons </label><br />
+                <label><input type ="radio" name="radio" value="peaches" /> Peaches </label><br />
+                <label><input type ="radio" name="radio" value="grapes" /> Grapes </label>
                 <br /><br />
                 <label>
                     Example date picker:<br />
-                    <input type="date" />
+                    <input name="date" type="date" />
                 </label>
                 <br /><br />
                 <label>
                     Example colour picker:<br />
-                    <input type="color" value="#92C2A6" />
+                    <input name="colour" type="color" value="#92C2A6" />
                 </label>
                 <br /><br />
                 <label>
                     Example dropdown:<br />
-                    <select>
+                    <select name="dropdown" required>
                         <option> </option>
                         <option>Lemons</option>
                         <option>Peaches</option>
@@ -57,7 +53,7 @@
                 <br /><br />
                 <label>
                     Example text area:<br />
-                    <textarea style="resize: none;" rows="5" cols="50">Write here</textarea>
+                    <textarea name="textbox" style="resize: none;" rows="5" cols="50">Write here</textarea>
                 </label>
                 <br /><br />
                 Buttons:<br />
