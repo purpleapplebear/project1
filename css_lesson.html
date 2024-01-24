@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS</title>
+        <style>
+
+            body {
+                font:15px Century Gothic;
+            }
+
+            h1 {
+                background-image: linear-gradient(rgba(127, 255, 212,1), rgba(127, 255, 212,0));
+                margin:0px;
+                padding:0.5em;
+                font-size:5em;
+                font-weight:normal;
+                letter-spacing:0.2em;
+                text-shadow: 0.08em 0.08em white;
+            }
+
+            strong {
+                font: italic 1em;
+            }
+
+            #notice{
+                background-image: linear-gradient(rgba(255, 192, 203,0), rgba(255, 192, 203,1));
+                color:rgb(46, 37, 134);
+                margin-top:2em;
+                font-size:2em;
+                padding:1.5em;
+                letter-spacing:0.2em;
+            }
+
+            #notice:hover{
+                background-image:none;
+                border:0.1em dashed pink;
+                padding:1.4em;
+            }
+
+            #notice p {
+                text-transform: uppercase;
+            }
+
+            .big {
+                font-size:2em;
+                font-weight:bold;
+            }
+
+            .highlight {
+                background:orange;
+                padding:0.1em;
+                border-radius:0.3em;
+                text-shadow: 0.1em 0.1em pink;
+            }
+
+            [readonly]{
+                border:5px solid rgb(0, 255, 170);
+            }
+
+            [type="number"]{
+                background:orange;
+                color:white;
+                border:none;
+            }
+
+            [max="3"]{
+                display:inline-block;
+                width:3em;
+                transition: width 1s;
+                background-color:aqua;
+                border:none;
+            }
+
+            [max="3"]:hover{
+                width:calc(50vw + 1em);
+            }
+
+            [autofocus]{
+                background-color:pink;
+            }
+
+            [href]{
+                text-decoration:none;
+            }
+
+            [href]:hover{
+                color:orange;
+                text-decoration:line-through;
+            }
+
+            [href*="google" i]{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+
+
+            <h1>Hello!</h1>
+
+            <p>This is my <strong>content</strong>....</p>
+            <p>This is my content....</p>
+            <p class="highlight">This is my content....</p>
+            <p>This is my content....</p>
+            <p>This is my content....</p>
+
+            <input readonly />
+            <input autofocus />
+            <input type="number" />
+            <input max="3" />
+
+            <p><a href="https://www.google.com">Google</a></p>
+            <p><a href="https://www.facebook.com">Facebook</a></p>
+            <p><a href="https://www.apple.com">Apple</a></p>
+            <p><a href="https://www.google.com">Google</a></p>
+            <p><a href="https://www.microsoft.com">Microsoft</a></p>
+
+
+            <section id="notice">
+                <p>This is my <span class="big highlight">notice</span> section</p>
+                <p>This is my content....</p>
+            </section>
+
+
+        </main>
+    </body>
+</html>
