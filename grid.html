@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grid</title>
+    <style>
+        main {
+            display:grid;
+            grid-template-rows:[top]100px [middle]500px [bottom]100px;
+            grid-template-columns: [one]100px [two]200px [three]100px;
+        }
+
+        .a {
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: top;
+            grid-row-end: middle;
+            background-color: pink;
+        }
+
+        .b {
+            grid-column-start: two;
+            grid-column-end: two;
+            grid-row-start: middle;
+            grid-row-end: 4;
+            background-color: lightblue;
+        }
+
+        .c {
+            grid-column-start: 1;
+            grid-column-end: 1;
+            grid-row-start: middle;
+            grid-row-end: 3;
+            background-color: rgb(186, 250, 186);
+        }
+
+        .d {
+            grid-column-start: 3;
+            grid-column-end: 4;
+            grid-row-start: middle;
+            grid-row-end: 3;
+            background-color: rgb(186, 250, 186);
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+
+       <div class="a">abc</div> 
+       <div class="b">def</div>
+       <div class="c">ghi</div>
+       <div class="d">jkl</div>
+
+    </main>
+    
+</body>
+</html>
