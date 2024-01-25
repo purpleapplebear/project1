@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Transitions</title>
+    <style>
+        body {
+            font:12pt tahoma, sans-serif;
+        }
+        h1 {
+            background:pink;
+            padding:1em;
+            transition: all 0.5s 0.25s;
+            font-size: 45pt;
+            letter-spacing:0.2em;
+            margin:0;
+        }
+
+        h1:hover{
+            background:aquamarine;
+            color:rgb(43, 128, 226);
+            padding:1em;
+            font-size:100pt;
+            letter-spacing:0;
+        }
+
+        .slow {
+
+            background:orange;
+            color:white;
+            transition: all 3s 0.5s;
+
+        }
+
+        .flex {
+            width:50%;
+            margin: 1em auto;
+            display:flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            row-gap: 10px;
+            column-gap: 4px;
+        }
+
+        .flex p {
+            text-align:justify;
+            width:calc(50% - 14px);
+            margin:0;
+            padding: 5px;
+            border-radius:0.2em;
+            background-color:#eed9ff;
+        }
+
+        .animated {
+            animation: barrel-roll 5s 5;
+        }
+
+
+        @keyframes barrel-roll {
+            /* from */ 
+            0%  {
+                transform: rotate(0deg);
+            }
+
+            /* to */
+
+            50% {
+                transform: rotate(180deg);
+
+            }
+
+            100% {
+                transform: rotate(360deg);
+
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <h1 class="slow">Slow</h1>
+    <h1>Hello</h1>
+
+    <div class="flex">
+        <p>content here 1</p>
+        <p>content here 2</p>
+        <p>content here 3</p>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus ullam facere nulla aspernatur expedita voluptate accusamus nihil praesentium aliquam in architecto, fugit, dignissimos beatae corporis delectus dolorum libero. Autem, sed!</p>
+        <p>content here 4</p>
+        <p>content here 5</p>
+        <p>content here 6</p>
+        <p>content here</p>
+        <p>content here</p>
+        <p>content here</p>
+        <p>content here</p>
+        <p>content here</p>
+        <p>content here</p>
+    </div>
+</body>
+</html>

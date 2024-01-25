@@ -8,6 +8,11 @@
                 font:15px Century Gothic;
             }
 
+/*             main {
+                display:flex;
+                flex-direction: column;
+            } */
+
             h1 {
                 background-image: linear-gradient(rgba(127, 255, 212,1), rgba(127, 255, 212,0));
                 margin:0px;
@@ -90,6 +95,18 @@
 
             [href*="google" i]{
                 color:red;
+            }
+
+            @media screen and (max-width:700px){
+                body {
+                    background-color:bisque;
+                }
+            }
+
+            @media print {
+                body {
+                    background-color:white;
+                }
             }
         </style>
     </head>
