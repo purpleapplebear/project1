@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Javascript</title>
+
+    <script>
+/* --------------------------------- QUICK LAB 1 -------------------------------------- */
+/*         let a = 10
+        var b = parseInt("10") //parseInt converts input to integer
+        c = 123.456
+        const d = 13 
+
+        console.log(c);
+        console.log(c.toFixed(2))
+        console.log(b.toFixed(2))
+        console.log(Math.floor(c))
+        console.log(Math.ceil(c))
+        console.log(Math.round(c)) */
+
+
+/*         let a = `15`
+        const d ="********AAAAAAAA******"
+        let name = "Dave"
+        let message = `Hello ${name}...... ${d}... One, two, three`
+
+        console.log(message)
+        console.log(message.toUpperCase())
+        console.log(message.toLowerCase())
+        console.log(message.substr(3, 10))
+        console.log(message.length)
+        console.log(message.substr(0, (message.length/2))) */
+
+
+/*         let numTest = 45.324568
+        console.log(numTest)
+
+        let twoDecimalPoints = numTest.toFixed(2)
+        console.log(twoDecimalPoints)
+
+        let stringTest = `I am the very model of a modern major general`
+        stringTest = stringTest.toUpperCase()
+        let indexOfM = stringTest.indexOf(`M`)
+        console.log(indexOfM)
+
+        let start = stringTest.indexOf("MODEL")
+        let end = stringTest.lastIndexOf('MAJOR')
+
+        console.log(start)
+        console.log(end)
+        let subStr = stringTest.substring(start, end)
+        console.log(subStr)
+
+        document.write("<p>" + subStr + "</p>") */
+
+
+/* --------------------------------- QUICK LAB 2 -------------------------------------- */
+
+    // Aritmetic Operators
+    // console.log(5 + 5);
+    // console.log(5 * 10);
+    // console.log(10 % 3);
+    // console.log(5 + 10 / 2 * 5 - 10);
+    // console.log((6 + 10) / 2 * 5 - 10);
+
+
+    // Assignment Operators
+    // let x = 0
+    // console.log(x = x + 1);
+    // console.log(x+= 1);
+    // console.log(x++);
+    // console.log(++x);
+
+    // Relational Operators
+    // console.log(5 > 3);
+    // console.log(3 != 3);
+    // console.log(3 <= 2 && 5 >2);
+    // console.log(!5>3);
+
+    // Mismatched Types
+    // console.log(5 + "5");
+    // console.log(5 + true);
+    // console.log(5 * "5");
+    // console.log(1 == true);
+    // console.log(1 === true);
+
+
+
+/* --------------------------------- QUICK LAB 3a -------------------------------------- */
+
+/*         let age = 10
+
+        if (age <= 17) {
+            console.log("Underage")
+        }
+        else if (age > 18 & age < 65) {
+            console.log("Insurable")
+        }
+        else {
+            console.log("out of range")
+        } */
+
+
+/* --------------------------------- QUICK LAB 3b -------------------------------------- */
+
+
+        // for (i=1; i < 10; i++) {
+        //     console.log(i)
+        // }
+
+        // let x = 2
+        // let loopCounter = 0
+
+        // while (x < 1000) {
+        //     x = x*x
+        //     loopCounter++
+        //     console.log(loopCounter)
+        //     // if (counter > 10) {
+        //     //     break;
+        //     // }
+        // }
+
+
+/* --------------------------------- QUICK LAB 5 -------------------------------------- */
+
+
+/*     quote = ["I", "am", "your", "friend"]
+    console.log(quote)
+
+    console.log(quote[2])
+
+    quote.pop(3)
+
+    quote.push("father")
+
+    console.log(quote)
+
+    quote.unshift("Luke")
+
+    console.log(quote)
+
+    erroneousWord = "Luke"
+
+    lukeisHere = quote.find(n => { return n === erroneousWord})
+
+    if (lukeisHere) { 
+        lukeIsAt = quote.findIndex(n => { return n === erroneousWord })
+        quote[lukeIsAt] = "No"; 
+    }
+
+    console.log(quote)
+
+    output = ""
+
+    for (let i = 0, j = quote.length; i < j; i++) { 
+        if (i === j - 1) { 
+            output += quote[i] + '!'; 
+        } 
+        else if (quote[i] === 'No') { 
+            output += quote[i] + ', '; 
+        } 
+        else { 
+            output += quote[i] + ' ' 
+        } 
+    }
+
+    console.log(output) */
+
+
+/* --------------------------------- FOR EACH EXAMPLE -------------------------------------- */
+/* 
+    data = ["a","b","c","d","e","f","g","h","i","j","k","l"]
+
+
+    //lists each data item
+    for(let i of data) {
+        console.log(i)
+    }
+
+
+    //lists each data array position
+    for(let i in data) {
+        console.log(i)
+    } */
+
+    //using let to declare i, it only uses i for this loop, i is not usable in the rest of the code
+
+
+
+/* --------------------------------- FUNCTION EXAMPLE -------------------------------------- */
+
+//method 1
+function counting(n=5){
+    console.log("----------")
+    for (let i=0; i < n; i++) {
+        console.log(i+1)
+    }
+}
+
+counting()
+counting(10)
+
+
+//method 2
+let countingAgain = (n=5) => {
+    console.log("----------")
+    for (i=0; i < n; i++) {
+        console.log(i+1)
+    }
+}
+
+countingAgain(2)
+countingAgain(3)
+
+    
+
+
+
+    </script>
+
+</head>
+<body>
+    
+</body>
+</html>
