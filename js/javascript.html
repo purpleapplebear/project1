@@ -188,7 +188,7 @@
 
 /* --------------------------------- FUNCTION EXAMPLE -------------------------------------- */
 
-//method 1
+/* //method 1
 function counting(n=5){
     console.log("----------")
     for (let i=0; i < n; i++) {
@@ -209,8 +209,66 @@ let countingAgain = (n=5) => {
 }
 
 countingAgain(2)
-countingAgain(3)
+countingAgain(3) */
 
+
+
+/* --------------------------------- QUICK LAB 8 -------------------------------------- */
+
+/* let darthVader = {
+    "allegiance": "Empire",
+    "weapon": "lightsabre",
+    "sith": true
+}
+
+// read out from object
+console.log(`Darth Vader's allegiance is ${darthVader.allegiance}`)
+console.log(`Darth Vader's weapon is a ${darthVader.weapon}`)
+console.log(`Is Darth Vader a sith? ${darthVader.sith}`)
+console.log(`Is Darth Vader a Jedi? ${darthVader.Jedi}`)
+
+//object length
+console.log(Object.keys(darthVader).length);
+
+//adding to object
+darthVader.children = 2
+darthVader.childNames = ["Luke", "Leia"]
+
+//reading out from new additions to object
+console.log(`Darth Vader has ${darthVader.children} children called ${darthVader.childNames[0]} and ${darthVader.childNames[1]}`)
+
+
+//iterating over the object to display each key value pair
+for (i in darthVader) {
+    console.log(`Darth Vader's ${i} is ${darthVader[i]}`)
+}
+
+//changing a value from a key
+darthVader.allegiance = "The light side"
+
+console.log(darthVader.allegiance)
+
+//deleting a key value pair
+delete darthVader.children
+
+let {allegiance, weapon, sith, childNames} = darthVader
+console.log(allegiance)
+console.log(weapon)
+console.log(sith)
+console.log(childNames)
+darthVader = {}
+console.log(darthVader) */
+
+
+/* --------------------------------- JS and the DOM -------------------------------------- */
+
+/* Document Object Model
+
+CRUD
+Create elements - tag name
+Retrieve elements - ID / CSS
+Update elements - style or html Text
+Delete elements */
     
 
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>My form</title>
+</head>
+<body>
+
+    <form action="http://www.nextpoint.co.uk/test.php" method="post">
+        <fieldset style="width:40%; border:5px groove; padding:10px;">
+            <legend style="font: 30px Courier New;">Form name</legend>
+            <label>
+                Example range: <br />
+                <input name="range" type="range" max="100" min="10" step="5" value="15" />
+            </label>
+            <br /><br />
+            <label>
+                Example date picker:<br />
+                <input name="date" type="date" />
+            </label>
+            <br /><br />
+            <label>
+                Example colour picker:<br />
+                <input name="colour" type="color" value="#92C2A6" />
+            </label>
+            <br /><br />
+            <label>
+                Example text area:<br />
+                <textarea name="textbox" style="resize: none;" rows="5" cols="50">Write here</textarea>
+            </label>
+            <br /><br />
+            Buttons:<br />
+            <input type="reset" value="Clear form">
+            <button>Button</button>
+    </fieldset>
+    </form>
+
+    <script>
+
+    function grabData(){
+        let nodeList = document.querySelectorAll("[name]")
+
+        loggedData = {}
+
+        for (let data of nodeList) {
+            loggedData[data.name]=data.value
+        }
+
+        console.log(JSON.stringify(loggedData))
+    }
+
+    </script>
+    
+</body>
+</html>

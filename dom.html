@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>DOM</title>
+    <style>
+
+        .big {
+            background:pink;
+            padding:1em;
+            transition: all 0.5s 0.25s;
+            font-size: 20pt;
+            letter-spacing:0.2em;
+            margin:0;
+        }
+
+        .big:hover{
+            background:aquamarine;
+            color:rgb(43, 128, 226);
+            padding:1em;
+            font-size:50pt;
+            letter-spacing:0;
+        }
+
+        #padded {
+            padding:3em;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <h1 class="big">Hello</h1>
+    <h1 class="big">ABC</h1>
+    <p id="padded">Padded text hello hello</p>
+
+    <input value="A">
+    <input value="B">
+    <input value="C">
+
+    
+
+    <script>
+        // let node = document.getElementById("padded")
+        // console.log(node.innerHTML)
+
+        // node.innerHTML = node.innerHTML + " added text to document"
+
+        // let nodeList = document.querySelectorAll(".big")
+
+        // for (let node of nodeList) {
+        //     node.innerHTML = node.innerHTML + `<span style="color:red">Added</span>`
+        // }
+
+        function test(){
+            let nodeList = document.querySelectorAll("[value]")
+
+            for (let node of nodeList) {
+                console.log(node.value)
+            }
+        }
+
+        
+
+    </script>
+</body>
+</html>

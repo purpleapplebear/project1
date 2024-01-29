@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Objects</title>
+
+    <script>
+        // array = list of items that can be referenced at their position
+
+        // objects = referenced by their key-name. Better than using arrays; arrays can be changed order or edited / arranged. object key-name is always the key-name
+
+        // method is a function inside of an object
+
+        // Old style of creating an object ------->    let something = new Object();
+
+        // JSON = javascript object notation
+
+        // CSV comma seperated values - can be opened as a spreadsheet to display data
+
+        let person = {
+            "name": "Dave",
+            "age": 20,
+            "job": "bus driver",
+            "gender": "male",
+            "ethnicity": "white",
+            "register": ["A","B","C"],
+            "address": {
+                "street": "ABC",
+                "city": "London",
+                "postcode": "XYZ"
+            },
+            "run": function(from,to) {
+                console.log(`${person.name} will run from ${from} to ${to} `)
+            },
+            "telephone number": "123123132"
+        }
+
+        console.log(person.name)
+        console.log(person.age)
+        console.log(person.job)
+        console.log(person.register[0])
+        console.log(person.register.length)
+        console.log(person.address.street)
+        console.log(person.address.city)
+        console.log(person.address.postcode)
+
+        person.register.push("D")
+
+        console.log(person.register)
+
+        person.run("Manchester", "London")
+        console.log(person["telephone number"])
+
+        // let key = prompt("Enter a field")
+        // console.log(person[key])
+
+        console.log(Object.keys(person))
+
+        
+/*         let html = ""
+
+        for (let key of Object.keys(person)) {
+            // console.log(`The ${key} is a ${typeof person[key]}`)
+            html += `<option>${key}</option>`
+        }
+
+        let node = document.createElement("select")
+        node.innerHTML = html
+        document.body.appendChild(node) */
+
+
+
+        
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
