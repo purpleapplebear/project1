@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Class</title>
+
+    <script>
+        class Phone {
+            speaker = "ZZZZ"
+            microphone = "AAAA"
+            number = "1231234"
+
+            constructor(config={}) {
+                if (config.telNumber == undefined) {
+                    alert("You need to provide a telepone number")
+                }
+                // shortened if command: ( if true, do this, if not, do nothing-(empty string))
+                // !config.telNumber ? alert("You need to provide a telepone number") : "" 
+                console.log("I am a phone that was created.")
+                this.number = config.telNumber
+            }
+
+            call(telNumber) {
+                alert("Ring ring " + telNumber + " : " + this.number)
+            }
+        }
+
+
+        class Smartphone extends Phone {
+            display = "big"
+        }
+
+
+
+
+        let myPhone = new Phone({telNumber: "099999", speaker: "ABC"})
+        console.log(myPhone)
+        console.log(myPhone.number)
+
+        let yourPhone = new Smartphone({telNumber: "04444444"})
+        console.log(yourPhone)
+        console.log(yourPhone.number)
+
+        // myPhone.call("999")
+        // yourPhone.call("999")
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
