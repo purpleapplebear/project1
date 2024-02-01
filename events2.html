@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Events</title>
+
+    <script src="events.js" defer></script>
+
+    <script>
+/*     let data = {
+        "name": "123465657",
+        "address":"abc address"
+    } */
+
+    let data = JSON.parse( sessionStorage.getItem("data") )
+
+    fetch('https://dummyjson.com/users/1')
+        .then(result => result.json())
+        .then(details => {
+            console.log(details)
+            data = details
+            dataBind.display()
+        })
+        
+    dataKeys = function() {
+        for (let item in data) {
+            console.log(item)
+        }
+    }
+
+
+    </script>
+
+
+</head>
+<body>
+
+    <h1>Display Data</h1>
+    <p>Name: <span data="name"></span></p>
+    <p>Address: <span data="address.city"></span></p>
+
+
+    <p>Age: <span data="age"></span></p>
+    <p>Forename: <span data="firstName"></span></p>
+    <p>Eye Colour: <span data="eyeColor"></span></p>
+
+
+</body>
+</html>

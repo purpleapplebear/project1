@@ -33,11 +33,8 @@ document.querySelector("button:nth-child(2)").addEventListener("click", action) 
 
 
 /* ----------------------Data Binding------------------------------ */
-
-
-let data = {
-    "name": " ",
-    "address":"Placeholder address"
+if(data == undefined) {
+    data = {};
 }
 
 let dataBind = function () {
@@ -45,7 +42,11 @@ let dataBind = function () {
 }
 
 dataBind.get = function (key) {
-    return data[key]
+    let field = data
+    key.split(".").forEach(function(item) {
+        field = field[item]
+    })
+    return field
 }
 
 dataBind.set = function (key, value) {
@@ -55,48 +56,44 @@ dataBind.set = function (key, value) {
 dataBind.display = function () {
     document.querySelectorAll("[name], [data]").forEach(function(item){
 
-        if (item.name == undefined){
-            item.innerText = data[item.getAttribute("data")]
+        if(item.name == undefined){
+            let key = item.getAttribute("data")
+            if (dataBind.get(key) !== undefined){
+                item.innerText = dataBind.get(key)
+            }
         }
 
-        else {
-            item.value = data[item.name]
-        }
-
+            else {
+                let key = item.name
+                if (dataBind.get(key) !== undefined){
+                    item.value = dataBind.get(key)
+                }
+            }
     })
+
+    }
+
+
+dataBind.save = function () {
+    console.log(JSON.stringify(data))
+    sessionStorage.setItem('data', JSON.stringify(data))
 }
 
 
-document.querySelector("form").addEventListener("input", function(e) {
+document.addEventListener("input", function(e) {
     dataBind.set(e.target.name, e.target.value)
     dataBind.display()
 })
 
 
 
-document.querySelector("button").addEventListener("click", function () {
+// document.querySelector("button").addEventListener("click", function () {
 
-    newInput = document.createElement("input")
-    newInput.setAttribute('name','name');
-    var parent = document.getElementById("container")
-    parent.appendChild(newInput)
-})
-
-/* Teacher demo:
-
-
-
-    let addItem = function(templateName) {
-    let parentNode = document.getElementById("itemList")
-
-    let node = document.createElement("div")
-    let template = document.querySelector(`[data-template="${templateName}"]`).innerHTML
-
-    template = template.replaceAll("{count}", parentNode.children.length)
-
-    node.innerHTML =  template
-    parentNode.appendChild(node)
-} */
+//     newInput = document.createElement("input")
+//     newInput.setAttribute('name','name');
+//     var parent = document.getElementById("container")
+//     parent.appendChild(newInput)
+// })
 
 
 

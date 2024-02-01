@@ -4,6 +4,24 @@
     <title>Events</title>
 
     <script src="events.js" defer></script>
+    <script>
+        let data = {
+        "name": " ",
+        "address":"Placeholder address"
+}
+
+let addItem = function(templateName, targetSelector) {
+    let parentNode = document.querySelector(targetSelector)
+
+    let node = document.createElement("div")
+    let template = document.querySelector(`[data-template="${templateName}"]`).innerHTML
+
+    template = template.replaceAll("{count}", parentNode.children.length)
+
+    node.innerHTML =  template
+    parentNode.appendChild(node)
+}
+    </script>
 
 
 </head>
@@ -26,6 +44,8 @@
      
 
     <form id="container">
+        <input type="button" value="Save" onclick="dataBind.save()">
+        <br><br>
         Full Name:  <input name="name"><br><br>
         Address:  <input name="address">
 
@@ -33,20 +53,34 @@
         <p>Your address is: </p>
         <textarea name="address"></textarea>
 
+        <!-- <br><br>
+        <input type="button" value="Add Item"
+        onclick="addItem('itemB','#anotherItemList')">
+
+        <div id="anotherItemList">
+        </div>  -->
+
         <br><br>
 
-    <!--  <input type="button" value="Add Item"
-        onclick="addItem('itemA')">
+        <!-- Teacher demo: -->
+
+        <input type="button" value="Add Item"
+        onclick="addItem('itemA','#itemList')">
+
         <div id="itemList">
         </div> 
 
         <template data-template="itemA">
-            <span>Item</span> - <input name="address{count}">
-        </template> -->
+            <span>Name</span> - <input name="name">
+        </template> 
+
+        <!-- <template data-template="itemB">
+            <span>Address</span> - <textarea name="address"></textarea>
+        </template>  -->
 
     </form>
 
-    <button>Update name?</button>
+    <!-- <button>Update name?</button> -->
 
     
 
